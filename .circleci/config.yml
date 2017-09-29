@@ -33,12 +33,9 @@ jobs:
             - ./vendor
           key: v1-dependencies-{{ checksum "composer.json" }}
 
-      - run:
-        #name: Setup Laravel testing environment variables for CircleCI test
-        command: cp .env.testing .env
+      - run: cp .env.testing .env
 
-      - run:
-        command: php -S localhost:8000 -t public
+      - run: php -S localhost:8000 -t public
 
       # run tests!
       - run: ./vendor/bin/phpunit
