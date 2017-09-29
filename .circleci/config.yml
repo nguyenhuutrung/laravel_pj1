@@ -36,9 +36,9 @@ jobs:
       - run:
         #name: Setup Laravel testing environment variables for CircleCI test
         command: cp .env.testing .env
-        
+
       - run:
-          php -S localhost:8000 -t public
+        command: php -S localhost:8000 -t public
 
       # run tests!
       - run: ./vendor/bin/phpunit
