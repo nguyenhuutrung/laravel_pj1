@@ -35,9 +35,5 @@ jobs:
 
       - run: cp .env.testing .env
 
-      - run: 
-          command: php -S localhost:8000 -t public
-          background: true
-
       # run tests!
       - run: ./vendor/bin/phpunit
