@@ -6,13 +6,13 @@ version: 2
 jobs:
   auto_deploy:
     steps:
-      run:
-        name: test
-        commands:
-          - echo 'no tests, just say us Okay!'
-      deploy:
-        #develop:
-        branch: master
-        commands:
-          - sh ./deploy_dev.sh
+      - run:
+          name: test
+          commands:
+            - echo 'no tests, just say us Okay!'
+      - deploy:
+          #develop:
+          branch: master
+          commands:
+            - sh ./deploy_dev.sh
 
