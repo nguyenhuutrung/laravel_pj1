@@ -11,7 +11,7 @@ echo '1. Updating sources'
 #sudo apache2ctl graceful
 
 cd /var/www/html/
-mkdir checkCI
+mkdir checkCI_dev
 echo '2.Done!'
 
 EOF
