@@ -12,6 +12,6 @@ echo '1. Updating sources'
 
 cd /var/www/html/
 mkdir checkCI
-echo 'Done!'
+echo '2.Done!'
 
 EOF
