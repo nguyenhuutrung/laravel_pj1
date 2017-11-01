@@ -11,11 +11,9 @@ jobs:
     steps:
       - run:
           name: test
-          commands:
-            - echo 'no tests, just say us Okay!'
+          commands: echo 'no tests, just say us Okay!'
       - deploy:
-          #develop:
-          branch: master
-          commands:
-            - sh ./deploy_dev.sh
-
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ];
+              then ./deploy_dev.sh;
+            fi
