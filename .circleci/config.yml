@@ -5,6 +5,7 @@
 version: 2
 jobs:
   build:
+    working_directory: ~/laravel_pj1
     docker:
       # specify the version you desire here
       - image: circleci/php:7.0-apache-node-browsers
