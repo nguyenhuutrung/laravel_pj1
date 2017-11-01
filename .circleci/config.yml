@@ -6,17 +6,19 @@ version: 2
 jobs:
   build:
     working_directory: ~/laravel_pj1
-    #docker:
+    docker:
       # specify the version you desire here
-      #- image: circleci/php:7.0-apache-node-browsers
+      - image: circleci/php:7.0-apache-node-browsers
     steps:
       - checkout
 
-      #- run:
-      #    name: test
-      #    command: echo 'no tests, just say us Okay!'
+      - run:
+          name: test
+          command: echo 'no tests, just say us Okay!'
       - deploy:
           command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ];
-              then ./deploy_dev.sh
+            if [ "${CIRCLE_BRANCH}" == "dev" ]; then 
+              ./deploy_dev.sh;
+            elif [ $CIRCLE_BRANCH = 'master' ]; then
+              ./deploy_master.sh;
             fi
