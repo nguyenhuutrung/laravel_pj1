@@ -4,12 +4,15 @@
 #
 version: 2
 jobs:
-  test:
-    override:
-      - echo 'no tests, just say us Okay!'
-  deploy:
-    #develop:
-    branch: master
-    commands:
-      - sh ./deploy_dev.sh
+  auto_deploy:
+    steps:
+      run:
+        name: test
+        commands:
+          - echo 'no tests, just say us Okay!'
+      deploy:
+        #develop:
+        branch: master
+        commands:
+          - sh ./deploy_dev.sh
 
