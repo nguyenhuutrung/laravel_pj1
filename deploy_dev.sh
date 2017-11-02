@@ -8,6 +8,6 @@ cd /var/www/html/laravel_pj1
 git pull
 composer install -n --prefer-dist --ignore-platform-reqs
 
-echo '2.Done!!'
+echo '2.Done!!!'
 
 EOF
