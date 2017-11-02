@@ -14,6 +14,6 @@ composer install -n --prefer-dist --ignore-platform-reqs
 
 #cd /var/www/html/
 #mkdir checkCI_dev
-echo '2.Done!'
+echo '2.Done!!'
 
 EOF
