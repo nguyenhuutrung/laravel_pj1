@@ -10,8 +10,8 @@ echo '1. Updating sources'
 #echo "2. Restart apache"
 #sudo apache2ctl graceful
 
-cd /var/www/html/
-mkdir checkCI
+#cd /var/www/html/
+#mkdir checkCI
 echo '2.Done!'
 
 EOF
