@@ -7,6 +7,7 @@ ssh -o "StrictHostKeyChecking no" ec2-user@54.238.158.106 << EOF
 # 	ssh -o "StrictHostKeyChecking no" ec2-user@54.238.158.106 << EOF
 # fi
 
+echo "$1"
 echo '1. Updating sources'
 
 # if [ "$1" = "master" ]; then  
