@@ -1,13 +1,12 @@
 #!/bin/bash
 
-ssh -o "StrictHostKeyChecking no" ec2-user@54.238.158.106 << EOF
-# if [ "$1" = "master" ]; then
-# 	ssh -o "StrictHostKeyChecking no" ec2-user@54.238.158.106 << EOF
-# elif [ "$1" = "staging" ]; then
-# 	ssh -o "StrictHostKeyChecking no" ec2-user@54.238.158.106 << EOF
-# fi
+# ssh -o "StrictHostKeyChecking no" ec2-user@54.238.158.106 << EOF
+if [ "$1" = "master" ]; then
+	ssh -o "StrictHostKeyChecking no" ec2-user@54.238.158.106 << EOF
+elif [ "$1" = "staging" ]; then
+	ssh -o "StrictHostKeyChecking no" ec2-user@54.238.158.106 << EOF
+fi
 
-echo "$1"
 echo '1. Updating sources'
 
 # if [ "$1" = "master" ]; then  
