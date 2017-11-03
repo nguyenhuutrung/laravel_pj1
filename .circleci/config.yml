@@ -17,10 +17,10 @@ jobs:
           command: echo 'no tests, just say us Okay!'
       - deploy:
           command: |
-            if [ ${CIRCLE_BRANCH} = "master" ]; then 
-              ./deploy.sh ${CIRCLE_BRANCH};
+            if [ $CIRCLE_BRANCH = "master" ]; then 
+              ./deploy.sh $CIRCLE_BRANCH;
             elif [ $CIRCLE_BRANCH = "staging" ]; then
-              ./deploy.sh ${CIRCLE_BRANCH};
-            elif [ $CIRCLE_BRANCH = "production" ]; then
-              ./deploy.sh ${CIRCLE_BRANCH};
+              ./deploy.sh $CIRCLE_BRANCH;
+            elif [ $CIRCLE_BRANCH} = "production" ]; then
+              ./deploy.sh $CIRCLE_BRANCH;
             fi
