@@ -10,7 +10,7 @@ jobs:
       # specify the version you desire here
       - image: circleci/php:7.0-apache-node-browsers
     steps:
-      #- checkout
+      - checkout
 
       # - run:
       #     name: test
