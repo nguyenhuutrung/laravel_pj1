@@ -19,6 +19,4 @@ jobs:
           command: |
             if [ $CIRCLE_BRANCH = "master" ]; then 
               ./deploy.sh $CIRCLE_BRANCH ec2-user@54.238.158.106;
-            elif [ $CIRCLE_BRANCH = "staging" ]; then
-              ./deploy.sh $CIRCLE_BRANCH ec2-user@54.238.158.106;
             fi
