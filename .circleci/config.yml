@@ -10,11 +10,11 @@ jobs:
       # specify the version you desire here
       - image: circleci/php:7.0-apache-node-browsers
     steps:
-      - checkout
+      #- checkout
 
-      - run:
-          name: test
-          command: echo 'no tests, just say us Okay!'
+      # - run:
+      #     name: test
+      #     command: echo 'Okay!'
       - deploy:
           command: |
             if [ $CIRCLE_BRANCH = "master" ]; then 
