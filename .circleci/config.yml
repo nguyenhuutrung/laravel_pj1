@@ -18,5 +18,5 @@ jobs:
       - deploy:
           command: |
             if [ $CIRCLE_BRANCH = "master" ]; then 
-              ./deploy.sh $CIRCLE_BRANCH;
+              ./deploy.sh $CIRCLE_BRANCH ec2-user@54.238.158.106;
             fi
