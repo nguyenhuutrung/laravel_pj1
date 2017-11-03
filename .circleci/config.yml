@@ -18,7 +18,9 @@ jobs:
       - deploy:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then 
-              ./deploy_dev.sh;
+              ./deploy.sh "${CIRCLE_BRANCH}";
             elif [ $CIRCLE_BRANCH = 'staging' ]; then
-              ./deploy_staging.sh;
+              ./deploy.sh "${CIRCLE_BRANCH}";
+            elif [ $CIRCLE_BRANCH = 'production' ]; then
+              ./deploy.sh "${CIRCLE_BRANCH}";
             fi
