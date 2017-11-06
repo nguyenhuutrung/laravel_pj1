@@ -52,4 +52,20 @@ $app->singleton(
 |
 */
 
+if(isset($_SERVER['SERVER_NAME'])){
+ 	$env = $app->detectEnvironment(function(){
+      	switch ($_SERVER['SERVER_NAME'])
+        {
+            case 'localhost' :
+              	$sever = "local";
+                break;
+          	case 'ec2-54-238-158-106.ap-northeast-1.compute.amazonaws.com':
+             	$sever = "dev";
+                break;
+        }
+      	$dotenv = new Dotenv\Dotenv(__DIR__ . '/../', '.'.$sever.'.env');
+      	$dotenv->overload();
+  	});
+}
+
 return $app;

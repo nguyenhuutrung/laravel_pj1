@@ -68,7 +68,7 @@
         <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="title m-b-md">
-                    Admissions backend
+                    Admissions backend-<?php echo getenv('APP_ENV'); ?>
                 </div>
             </div>
         </div>
