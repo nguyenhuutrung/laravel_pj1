@@ -1,11 +1,8 @@
 #!/bin/bash
-#sudo apt-get update && apt-get install -y awscli
 
-aws --version
+public_ip_address=$(wget -qO- http://checkip.amazonaws.com)
 
-aws ec2 authorize-security-group-ingress --region ap-northeast-1 --group-id sg-fda6a19b --ip-permissions "[{\"IpProtocol\": \"tcp\", \"FromPort\": 22, \"ToPort\": 22, \"IpRanges\": [{\"CidrIp\": \"101.53.23.34/32\"}]}]"
-
-wget -qO- http://checkip.amazonaws.com
+aws ec2 authorize-security-group-ingress --region ap-northeast-1 --group-id sg-fda6a19b --ip-permissions "[{\"IpProtocol\": \"tcp\", \"FromPort\": 22, \"ToPort\": 22, \"IpRanges\": [{\"CidrIp\": \"${public_ip_address}/32\"}]}]"
 
 ssh -o "StrictHostKeyChecking no" $2 << EOF
 
