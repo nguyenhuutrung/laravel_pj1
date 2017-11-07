@@ -11,9 +11,11 @@ jobs:
       - image: circleci/php:7.0-apache-node-browsers
     steps:
       - checkout
-      - run: sudo apt-get update && sudo apt-get install -qq -y python-pip libpython-dev
-      - run: curl -O https://bootstrap.pypa.io/get-pip.py && sudo python get-pip.py
-      - run: sudo pip install -q awscli --upgrade
+      - run
+        command: |
+          sudo apt-get update && sudo apt-get install -qq -y python-pip libpython-dev
+          curl -O https://bootstrap.pypa.io/get-pip.py && sudo python get-pip.py
+          sudo pip install -q awscli --upgrade
       - run:
           name: test
           command: echo 'no tests, just deploy!'
