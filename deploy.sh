@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo apt-get update && apt-get install -y awscli
 
-aws --version
+sudo aws --version
 
 #aws ec2 authorize-security-group-ingress --region ap-northeast-1 --group-id sg-fda6a19b --ip-permissions "[{\"IpProtocol\": \"tcp\", \"FromPort\": 22, \"ToPort\": 22, \"IpRanges\": [{\"CidrIp\": \"101.53.23.34/32\"}]}]"
 
