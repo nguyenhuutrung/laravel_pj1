@@ -1,5 +1,5 @@
 #!/bin/bash
-apt-get update && apt-get install -y awscli
+sudo apt-get update && apt-get install -y awscli
 
 aws --version
 
